@@ -1,0 +1,35 @@
+version: '2.1'
+
+services:
+ 
+  dbapi-service:
+    container_name: dpapi-service
+    build: ./  # relative to main docker-comose file 
+    expose:
+      - '4001'
+    ports: 
+      - '4001:4001'  # expose ports - HOST:CONTAINER
+      # - '3306:3306'  # expose ports - HOST:CONTAINER
+    environment:
+      - host:'192.168.1.27' 
+      - MYSQL_USER='root'
+      - MYSQL_PASSWORD='root'     
+     
+
+  reactt-service:
+    container_name: reactt-service
+    build: ./client
+    volumes:
+      - './client:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3100:3100' # expose ports - HOST:CONTAINER      
+      # - '4001:4001' # expose ports - HOST:CONTAINER      
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    # depends_on
+    #     dbapi-service:
+    #     condition: service_started
+    # links:
+      #- dbapi-service
+    
