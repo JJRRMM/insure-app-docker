@@ -5,14 +5,14 @@ const mongoose = require("mongoose");
 const mysql = require("mysql");
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize('insure_app_db', 'root','root',{
-    host     : '192.168.1.27',
+    host     : '104.211.29.186',
     dialect  : 'mysql'
   });
 // var db = require("./models"); logging on to remote server
 const connection = mysql.createConnection({
-    host: 'locahost',
-    user: 'root',
-    password: 'root',
+    host: '104.211.29.186',
+    user: 'remote',
+    password: 'Password1@',
     database: 'insure_app_db'
 });
 

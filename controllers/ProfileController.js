@@ -6,9 +6,9 @@ const mysql = require("mysql");
 console.log(" Breaker Break Break");
 const connection = mysql.createConnection({
   // host: '127.0.0.1',
-  host: '192.168.1.28',
-  user: 'root',
-  password: 'root',
+  host: '104.211.29.186',
+  user: 'remote',
+  password: 'Password1@',
   database: 'insure_app_db'
 });
 connection.connect();
