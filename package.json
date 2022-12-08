@@ -19,7 +19,7 @@
   "homepage": "https://github.com/dzarrillo/insure-app#readme",
   "dependencies": {
     "axios": "^0.16.2",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.2.9",
     "morgan": "^1.9.0",
